@@ -18,6 +18,7 @@ echo "xhost +si:localuser:$USER" > ~/.distroboxrc
 
 # Install neofetch
 echo "Installing neofetch..."
+rm -f ~/.local/bin/neofetch
 wget -P ~/.local/bin https://raw.githubusercontent.com/hykilpikonna/hyfetch/master/neofetch
 chmod +x ~/.local/bin/neofetch
 
