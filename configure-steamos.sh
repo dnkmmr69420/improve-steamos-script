@@ -16,6 +16,10 @@ flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
 echo "Configuring ~/.distroboxrc..."
 echo "xhost +si:localuser:$USER" > ~/.distroboxrc
 
+# Configure .bashrc
+echo "Configuring .bashrc..."
+echo 'PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+
 # Install neofetch
 echo "Installing neofetch..."
 rm -f ~/.local/bin/neofetch
@@ -23,4 +27,7 @@ wget -P ~/.local/bin https://raw.githubusercontent.com/hykilpikonna/hyfetch/mast
 chmod +x ~/.local/bin/neofetch
 
 # Install some user flatpaks
+echo "Installing flatpaks..."
 flatpak install flathub org.mozilla.firefox --user --or-update
+
+
