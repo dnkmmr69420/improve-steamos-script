@@ -29,5 +29,6 @@ chmod +x ~/.local/bin/neofetch
 # Install some user flatpaks
 echo "Installing flatpaks..."
 flatpak install flathub org.mozilla.firefox --user --or-update
+flatpak install flathub org.kde.kcalc --user --or-update
 
 
