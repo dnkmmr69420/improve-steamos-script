@@ -2,14 +2,11 @@
 
 # this sets up steamos in my prefered way
 
-# adds flatpak user
-echo "Switching to flatpak user..."
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --user
-
 # Configure flatpak
 echo "Configuring flatpak..."
 flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
 flatpak override --system --filesystem=xdg-config/gtk-3.0:ro
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --user
 
 # Configure distrobox
 echo "Configuring ~/.distroboxrc..."
